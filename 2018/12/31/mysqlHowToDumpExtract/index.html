@@ -5,19 +5,20 @@
   
 
   
-  <title>태그: 애드핏 | 왕야옹 창고</title>
+  <title>mysql 데이터 백업하기 | 왕야옹 창고</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="공유기 제작 경험과 기술을 공유합니다">
-<meta name="keywords" content="잼라이브, 프로그래밍, node.js, 라이브 퀴즈 공유기">
-<meta property="og:type" content="website">
-<meta property="og:title" content="왕야옹 창고">
-<meta property="og:url" content="http://kingcats.net/tags/애드핏/index.html">
+  <meta name="description" content="mysql 데이터 백업은 mysql 을 설치할 때 bin 폴더에 생기는 mysqldump.exe 로 할 수 있다. 1&amp;gt;mysqldump -u[계정명] -p [데이터베이스명] &amp;gt; [저장할 경로 및 파일명] 로 간단하게 할 수 있다. 여기에 Stored Procedure 까지 함께 추출하고 싶다면  1&amp;gt;mysqldump -u[계정명] -p --">
+<meta name="keywords" content="노드,Node.js,버전 체크">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql 데이터 백업하기">
+<meta property="og:url" content="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/index.html">
 <meta property="og:site_name" content="왕야옹 창고">
-<meta property="og:description" content="공유기 제작 경험과 기술을 공유합니다">
+<meta property="og:description" content="mysql 데이터 백업은 mysql 을 설치할 때 bin 폴더에 생기는 mysqldump.exe 로 할 수 있다. 1&amp;gt;mysqldump -u[계정명] -p [데이터베이스명] &amp;gt; [저장할 경로 및 파일명] 로 간단하게 할 수 있다. 여기에 Stored Procedure 까지 함께 추출하고 싶다면  1&amp;gt;mysqldump -u[계정명] -p --">
 <meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-31T01:20:10.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="왕야옹 창고">
-<meta name="twitter:description" content="공유기 제작 경험과 기술을 공유합니다">
+<meta name="twitter:title" content="mysql 데이터 백업하기">
+<meta name="twitter:description" content="mysql 데이터 백업은 mysql 을 설치할 때 bin 폴더에 생기는 mysqldump.exe 로 할 수 있다. 1&amp;gt;mysqldump -u[계정명] -p [데이터베이스명] &amp;gt; [저장할 경로 및 파일명] 로 간단하게 할 수 있다. 여기에 Stored Procedure 까지 함께 추출하고 싶다면  1&amp;gt;mysqldump -u[계정명] -p --">
   
     <link rel="alternate" href="/atom.xml" title="왕야옹 창고" type="application/atom+xml">
   
@@ -71,40 +72,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/12/30/vueAdfitSettings/" class="archive-article-date">
-  <time datetime="2018-12-30T13:49:05.000Z" itemprop="datePublished">12월 30</time>
+        <section id="main"><article id="post-mysqlHowToDumpExtract" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/31/mysqlHowToDumpExtract/" class="article-date">
+  <time datetime="2018-12-31T01:10:14.000Z" itemprop="datePublished">2018-12-31</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/웹프로그래밍/">웹프로그래밍</a>►<a class="article-category-link" href="/categories/웹프로그래밍/Node-js/">Node.js</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/30/vueAdfitSettings/">webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기</a>
+    <h1 class="article-title" itemprop="name">
+      mysql 데이터 백업하기
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mysql 데이터 백업은 mysql 을 설치할 때 bin 폴더에 생기는 mysqldump.exe 로 할 수 있다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;mysqldump -u[계정명] -p [데이터베이스명] &gt; [저장할 경로 및 파일명]</span><br></pre></td></tr></table></figure>
+<p>로 간단하게 할 수 있다.</p>
+<p>여기에 Stored Procedure 까지 함께 추출하고 싶다면 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;mysqldump -u[계정명] -p --routines [데이터베이스명] &gt; [저장할 경로 및 파일명]</span><br></pre></td></tr></table></figure>
+<p><code>--routines</code> 를 추가 해주면 된다.</p>
+<p>만약 실행 시에 access denied 가 뜬다면 cmd 창을 <code>관리자 권한</code>으로 띄워서 다시 해보자.</p>
+<blockquote>
+<p><a href="https://toon.at/donate/636800116400915381" target="_blank" rel="noopener">사이트 후원하기</a></p>
+</blockquote>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/" data-id="cjqbn5huv002f5wrmlvmsaxb7" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/노드/">노드</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/버전-체크/">버전 체크</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/31/hexoDeployCnameProblem/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">github 사이트 custom domain 사용 시, hexo 로 deploy 하면 초기화 되는 문제 해결 방법</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
