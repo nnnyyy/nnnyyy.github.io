@@ -73,6 +73,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexoSetup" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/31/hexoSetup/" class="article-date">
+  <time datetime="2018-12-31T08:55:04.000Z" itemprop="datePublished">2018-12-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/웹프로그래밍/">웹프로그래밍</a>►<a class="article-category-link" href="/categories/웹프로그래밍/기타/">기타</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/31/hexoSetup/">hexo(헥소) 간단 설치 및 사용법</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://hexo.io/ko/index.html" target="_blank" rel="noopener">hexo</a> 는 마크다운 문법이 사용가능한 블로그 프레임워크이다.</p>
+<p>(이 사이트가 hexo로 만들어져 있다.)</p>
+<p>hexo를 설치하고 실행하기에 앞서 먼저 설치해야 될 두가지가 있다.</p>
+<hr>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>소스 관리 툴이다.</p>
+<p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">window 용 설치 페이지</a><br><a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">mac 용 설치 페이지</a></p>
+<h2 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h2><p>javascript 기반 웹 서버 프레임워크이다.</p>
+<p><a href="https://nodejs.org/ko/" target="_blank" rel="noopener">Node.js 홈페이지</a></p>
+<hr>
+<p>두가지를 다 설치했다면 이제는 hexo를 설치하도록 한다.</p>
+<p>일단 hexo 명령어를 cmd에서 실행하기 위해서</p>
+<p>hexo-cli 패키지를 설치한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>( npm 명령어는 node.js 를 설치하면 실행 할 수 있다. )</p>
+<p>그리고 </p>
+<p>hexo를 설치할 폴더로 들어가서 아래와 같이 실행해준다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo init [폴더명]</span><br></pre></td></tr></table></figure>
+<p>여기선 TestBlog 로 하겠다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo init TestBlog</span><br></pre></td></tr></table></figure>
+<p>그 후에 TestBlog 폴더로 들어가서 인스톨을 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;cd TestLog</span><br><span class="line">TestBlog&gt;npm install</span><br></pre></td></tr></table></figure>
+<p>( <code>npm install</code> 명령어는 폴더 내에 있는 <code>package.json</code> 파일에 있는 모듈을 전부 인스톨 해준다. )</p>
+<p>마지막으로 로컬테스트를 위한 hexo 서버를 실행한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TestBlog&gt;hexo server</span><br></pre></td></tr></table></figure>
+<p>서버 포트는 기본 4000번으로 되어있다.</p>
+<p>다른 포트를 사용하고 싶으면 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TestBlog&gt;hexo server -p 4444</span><br></pre></td></tr></table></figure>
+<p>이렇게 바꾸면 된다.</p>
+<p>그 이후 브라우져에서 <a href="http://localhost:4444" target="_blank" rel="noopener">http://localhost:4444</a> 를 입력해보자</p>
+<p>기본 블로그 화면이 떴다면 성공!</p>
+
+      
+    </div>
+    <div data-url="http://kingcats.net/2018/12/31/hexoSetup/" data-id="cjqc3s9om000euormjoddrfl5" class="article-donate-link">후원하기♥</div>
+    
+    <footer class="article-footer">      
+      <a data-url="http://kingcats.net/2018/12/31/hexoSetup/" data-id="cjqc3s9om000euormjoddrfl5" class="article-share-link">공유</a>
+      
+        <a href="http://kingcats.net/2018/12/31/hexoSetup/#disqus_thread" class="article-comment-link">댓글</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/웹-블로그/">웹 블로그</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+  
     <article id="post-mysqlHowToDumpExtract" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/31/mysqlHowToDumpExtract/" class="article-date">
@@ -109,10 +183,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/" data-id="cjqc1nkyq000go0rmgg5nj5j1" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/" data-id="cjqc3s9ow000juorm1hbnoido" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/" data-id="cjqc1nkyq000go0rmgg5nj5j1" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/" data-id="cjqc3s9ow000juorm1hbnoido" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/31/mysqlHowToDumpExtract/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -167,10 +241,10 @@
 </code></pre>
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/31/hexoDeployCnameProblem/" data-id="cjqc1nkyk000co0rmcq79ttak" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/31/hexoDeployCnameProblem/" data-id="cjqc3s9ok000duormadb1cna2" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/31/hexoDeployCnameProblem/" data-id="cjqc1nkyk000co0rmcq79ttak" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/31/hexoDeployCnameProblem/" data-id="cjqc3s9ok000duormadb1cna2" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/31/hexoDeployCnameProblem/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -228,10 +302,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/30/vueAdfitSettings/" data-id="cjqc1nl0g0038o0rmqaj5f0ng" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/30/vueAdfitSettings/" data-id="cjqc3s9qs003duormwtwibpqh" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/30/vueAdfitSettings/" data-id="cjqc1nl0g0038o0rmqaj5f0ng" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/30/vueAdfitSettings/" data-id="cjqc3s9qs003duormwtwibpqh" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/30/vueAdfitSettings/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -275,10 +349,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; npm --version</span><br></pre></td></tr></table></figure>
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/30/nodeCheckVersion/" data-id="cjqc1nl0d0037o0rmthfp3jif" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/30/nodeCheckVersion/" data-id="cjqc3s9qp003cuormtt40cxwk" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/30/nodeCheckVersion/" data-id="cjqc1nl0d0037o0rmthfp3jif" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/30/nodeCheckVersion/" data-id="cjqc3s9qp003cuormtt40cxwk" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/30/nodeCheckVersion/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -466,10 +540,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/30/JavaLecture5/" data-id="cjqc1nkye0008o0rmiplnkrvm" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/30/JavaLecture5/" data-id="cjqc3s9of0009uormgi9icymw" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/30/JavaLecture5/" data-id="cjqc1nkye0008o0rmiplnkrvm" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/30/JavaLecture5/" data-id="cjqc3s9of0009uormgi9icymw" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/30/JavaLecture5/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -709,10 +783,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/30/JavaLecture4/" data-id="cjqc1nky70005o0rm9tsxgdww" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/30/JavaLecture4/" data-id="cjqc3s9od0006uormqppfmoy1" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/30/JavaLecture4/" data-id="cjqc1nky70005o0rm9tsxgdww" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/30/JavaLecture4/" data-id="cjqc3s9od0006uormqppfmoy1" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/30/JavaLecture4/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -878,10 +952,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/29/JavaLecture3/" data-id="cjqc1nky30003o0rm7edjgcc1" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/29/JavaLecture3/" data-id="cjqc3s9o80005uorm7xv8lmpy" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/29/JavaLecture3/" data-id="cjqc1nky30003o0rm7edjgcc1" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/29/JavaLecture3/" data-id="cjqc3s9o80005uorm7xv8lmpy" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/29/JavaLecture3/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -1047,10 +1121,10 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/29/JavaLecture2/" data-id="cjqc1nkyc0006o0rm3p0b6gph" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/29/JavaLecture2/" data-id="cjqc3s9o40004uormkuwgf4zk" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/29/JavaLecture2/" data-id="cjqc1nkyc0006o0rm3p0b6gph" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/29/JavaLecture2/" data-id="cjqc3s9o40004uormkuwgf4zk" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/29/JavaLecture2/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -1155,66 +1229,16 @@
 
       
     </div>
-    <div data-url="http://kingcats.net/2018/12/29/JavaLecture1/" data-id="cjqc1nkxw0001o0rm59yitpwx" class="article-donate-link">후원하기♥</div>
+    <div data-url="http://kingcats.net/2018/12/29/JavaLecture1/" data-id="cjqc3s9nr0000uorm52osti02" class="article-donate-link">후원하기♥</div>
     
     <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/29/JavaLecture1/" data-id="cjqc1nkxw0001o0rm59yitpwx" class="article-share-link">공유</a>
+      <a data-url="http://kingcats.net/2018/12/29/JavaLecture1/" data-id="cjqc3s9nr0000uorm52osti02" class="article-share-link">공유</a>
       
         <a href="http://kingcats.net/2018/12/29/JavaLecture1/#disqus_thread" class="article-comment-link">댓글</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/자바/">자바</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-  
-    <article id="post-AutoQuizNotice" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/29/AutoQuizNotice/" class="article-date">
-  <time datetime="2018-12-28T16:21:54.000Z" itemprop="datePublished">2018-12-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/라이브-퀴즈-공유기/">라이브 퀴즈 공유기</a>►<a class="article-category-link" href="/categories/라이브-퀴즈-공유기/공지/">공지</a>►<a class="article-category-link" href="/categories/라이브-퀴즈-공유기/공지/자동-퀴즈-관련/">자동 퀴즈 관련</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/29/AutoQuizNotice/">자동 퀴즈 시간 안내</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>공유기 사이트에서는 라이브 퀴즈 시간( 잼라이브, 더퀴즈라이브 등 )이 아닌 시간 대에<br>다양한 퀴즈를 제공하고 있으며 그 시간대는 아래와 같습니다.</p>
-<h2 id="자동-퀴즈-시간"><a href="#자동-퀴즈-시간" class="headerlink" title="자동 퀴즈 시간"></a>자동 퀴즈 시간</h2><p><code>오후 3시 - 오후 7시 / 오후 11시 - 다음날 오후 12시</code></p>
-<hr>
-<h2 id="자음-퀴즈"><a href="#자음-퀴즈" class="headerlink" title="자음 퀴즈"></a>자음 퀴즈</h2><p><code>자동퀴즈 시간 중 매 시 30~40분 사이</code></p>
-<hr>
-<h2 id="서바이벌-OX-퀴즈"><a href="#서바이벌-OX-퀴즈" class="headerlink" title="서바이벌 OX 퀴즈"></a>서바이벌 OX 퀴즈</h2><p><code>자동퀴즈 시간 중 매 시 정각</code></p>
-<hr>
-<p>좋은 퀴즈 아이디어는 카페에 공유 부탁드립니다.<br>감사합니다. ^^</p>
-
-      
-    </div>
-    <div data-url="http://kingcats.net/2018/12/29/AutoQuizNotice/" data-id="cjqc1nkxp0000o0rmlfidgf80" class="article-donate-link">후원하기♥</div>
-    
-    <footer class="article-footer">      
-      <a data-url="http://kingcats.net/2018/12/29/AutoQuizNotice/" data-id="cjqc1nkxp0000o0rmlfidgf80" class="article-share-link">공유</a>
-      
-        <a href="http://kingcats.net/2018/12/29/AutoQuizNotice/#disqus_thread" class="article-comment-link">댓글</a>
-      
-      
     </footer>
   </div>
   
@@ -1245,7 +1269,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">태그</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cname/">cname</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysqldump/">mysqldump</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cname/">cname</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysqldump/">mysqldump</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/웹-블로그/">웹 블로그</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
     </div>
   </div>
 
@@ -1255,7 +1279,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">태그 클라우드</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/DB/" style="font-size: 10px;">DB</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/cname/" style="font-size: 10px;">cname</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/mysqldump/" style="font-size: 10px;">mysqldump</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
+      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/DB/" style="font-size: 10px;">DB</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/cname/" style="font-size: 10px;">cname</a> <a href="/tags/deploy/" style="font-size: 10px;">deploy</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/mysqldump/" style="font-size: 10px;">mysqldump</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/웹-블로그/" style="font-size: 10px;">웹 블로그</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
     </div>
   </div>
 
@@ -1277,6 +1301,10 @@
       <ul>
         
           <li>
+            <a href="/2018/12/31/hexoSetup/">hexo(헥소) 간단 설치 및 사용법</a>
+          </li>
+        
+          <li>
             <a href="/2018/12/31/mysqlHowToDumpExtract/">mysql 데이터 백업하기</a>
           </li>
         
@@ -1290,10 +1318,6 @@
         
           <li>
             <a href="/2018/12/30/nodeCheckVersion/">노드 및 npm 버전 체크</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/30/JavaLecture5/">비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기</a>
           </li>
         
       </ul>
