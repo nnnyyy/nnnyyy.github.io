@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기 | 왕야옹 창고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담이걸 보기 전까지 열심히 반복학습을 했을까? 사실 여지껏 가르쳤던 사람들은 대부분 열심히 반복해서 해오지 않았다. 그냥 과제가 없으면 안했고, 있으면 어떻게든 해오긴 했으나 거기까지였다. 프로그래밍은 끊">
+<meta name="keywords" content="자바,Java,프로그래밍,조건문,반복문,심화학습">
+<meta property="og:type" content="article">
+<meta property="og:title" content="비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기">
+<meta property="og:url" content="http://kingcats.net/2018/12/30/JavaLecture5/index.html">
+<meta property="og:site_name" content="왕야옹 창고">
+<meta property="og:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담이걸 보기 전까지 열심히 반복학습을 했을까? 사실 여지껏 가르쳤던 사람들은 대부분 열심히 반복해서 해오지 않았다. 그냥 과제가 없으면 안했고, 있으면 어떻게든 해오긴 했으나 거기까지였다. 프로그래밍은 끊">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-31T00:44:12.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기">
+<meta name="twitter:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담이걸 보기 전까지 열심히 반복학습을 했을까? 사실 여지껏 가르쳤던 사람들은 대부분 열심히 반복해서 해오지 않았다. 그냥 과제가 없으면 안했고, 있으면 어떻게든 해오긴 했으나 거기까지였다. 프로그래밍은 끊">
+  
+    <link rel="alternate" href="/atom.xml" title="왕야옹 창고" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3598320494828213",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+</html>
+<body>      
+  <div id="container">      
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">왕야옹 창고</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kingcats.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaLecture5" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/30/JavaLecture5/" class="article-date">
+  <time datetime="2018-12-30T07:07:52.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/프로그래밍/">프로그래밍</a>►<a class="article-category-link" href="/categories/프로그래밍/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.<br>전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.</p>
+</blockquote>
+<hr>
+<h1 id="잡담"><a href="#잡담" class="headerlink" title="잡담"></a>잡담</h1><p>이걸 보기 전까지 열심히 반복학습을 했을까?</p>
+<p>사실 여지껏 가르쳤던 사람들은 대부분 열심히 반복해서 해오지 않았다.</p>
+<p>그냥 과제가 없으면 안했고, 있으면 어떻게든 해오긴 했으나</p>
+<p>거기까지였다.</p>
+<p>프로그래밍은 끊임없이 궁금해하고 이것저것 바꿔보고 </p>
+<p>오류가 나면 찾아서 잡아내고 하면서 실력이 쌓인다. </p>
+<p>강좌만 보고 강좌대로 실행이 됐다고 좋아하고 끝나면</p>
+<p>결국 백지에서 다시 뭔가를 하려고 시도했을 때 아무것도 할 수 없는 상태가 된다.</p>
+<p>계속 궁금해하고 끊임없이 코드를 변경해서 어떠한 변화가 생기는지 시도해보자.</p>
+<p>오늘은 그 시도를 어떤식으로 해야할지 같이 한번 해보려고 한다.</p>
+<h1 id="조건을-복잡하게-해보자"><a href="#조건을-복잡하게-해보자" class="headerlink" title="조건을 복잡하게 해보자"></a>조건을 복잡하게 해보자</h1><ul>
+<li>변수, 상수</li>
+<li>조건문</li>
+<li>반복문</li>
+</ul>
+<p>크게는 이렇게 3가지를 배운 것 같다.</p>
+<p>그리고 나름 게임 예시를 들어가면서 hp 라는 변수명도 만들어보고 그 값을 출력해보기도 했다.</p>
+<p>이제는 좀 더 조건을 추가해서 상황에 따라 다른 메시지를 출력하도록 해보겠다.</p>
+<p>이전 예제는 싸악 지우고 아래처럼 만들자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그리고 아래와 같은 조건의 프로그램을 한번 만들어보도록 하자</p>
+<ul>
+<li>hp가 100이고 mp가 10인 캐릭터가 있다.</li>
+<li>hp가 0이 되면 죽는다.</li>
+<li>한 턴마다 hp가 10씩 소모된다.</li>
+<li>이 턴은 캐릭터가 죽기전까지 계속 반복된다.</li>
+<li>한 턴마다 남은 hp와 mp가 표시된다.</li>
+<li>hp가 50 이하로 떨어지면 mp 5를 사용해서 hp 30을 회복한다.</li>
+</ul>
+<p>우리가 배운 기술로만 이것을 해 볼 것이다.</p>
+<p>일단 조건대로 코드를 만들어보자.</p>
+<ul>
+<li>hp가 100이고 mp가 10인 캐릭터가 있다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> hp = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> mp = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hp가 0이 되면 죽는다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( hp == <span class="number">0</span> ) &#123;</span><br><span class="line">    System.out.println(<span class="string">"죽었다"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>한 턴마다 hp가 10씩 소모된다.</li>
+<li>이 턴은 캐릭터가 죽기전까지 계속 반복된다.</li>
+</ul>
+<p>이 조건은 어떻게 구현해야 할까?</p>
+<p>일단 죽기전까지 <code>반복</code> 되어야 한다.</p>
+<p>근데 죽는 조건은 hp 가 0 이 될 때이다.</p>
+<p>그럼 이 반복을 다시 정의하면</p>
+<blockquote>
+<p>캐릭터의 hp가 0보다 클 동안(for) 반복된다.</p>
+</blockquote>
+<p>가 될 것이고, 이건 코드로 아래처럼 표현 가능하다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; ) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그리고 이 반복문에 <code>한 턴마다 hp가 10씩 소모된다</code> 라는 조건을 추가한다.</p>
+<p>기존의 hp 값에서 10을 뺀 값을 다시 hp에 설정하려면 어떻게 해야 할까?</p>
+<p>이전 강좌에서 count를 늘리던 방법을 기억하는가?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count = count + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>이 방법을 응용해서 hp가 10이 줄어들려면 어떻게 해야하는지 생각해보자.</p>
+<p><code>hp - 10</code> 을 하면 기존의 hp가 100일 때 90 이 나올 것이다.</p>
+<p>저 수식에서 나온 값을 다시 hp 변수에 대입 하는거다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hp = hp - <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<p>그럼 다시 올라가서 <code>한 턴마다 hp가 10씩 소모된다</code> 라는 조건의 코드를 다시 만들어보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; hp = hp - <span class="number">10</span>) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이건 <code>반복문의 증감식</code>에 추가한 모습이다.</p>
+<p>또 다른 방법으로는 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; ) &#123;</span><br><span class="line">    hp = hp - <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이렇게 해줄 수 있다.</p>
+<p>여기까지의 전체 코드를 한번 보도록 하자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> hp = <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">int</span> mp = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; hp = hp - <span class="number">10</span> ) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( hp == <span class="number">0</span> ) &#123;</span><br><span class="line">            System.out.println(<span class="string">"죽었다"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>한 턴마다 남은 hp와 mp가 표시된다.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; hp = hp - <span class="number">10</span> ) &#123;    </span><br><span class="line">    System.out.print(<span class="string">"hp : "</span>);</span><br><span class="line">    System.out.println(hp);</span><br><span class="line">    System.out.print(<span class="string">"mp : "</span>);</span><br><span class="line">    System.out.println(mp);</span><br><span class="line">    System.out.println(<span class="string">"----------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>여기까지 하고 난 후 실행시키면 다음과 같이 될 것이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">hp : 100</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 90</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 80</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 70</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 60</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 50</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 40</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 30</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 20</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 10</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">죽었다</span><br></pre></td></tr></table></figure>
+<p>이제 마지막 조건을 추가해보자.</p>
+<ul>
+<li>hp가 50 이하로 떨어지면 mp 5를 사용해서 hp 30을 회복한다.</li>
+</ul>
+<p>이 조건이 이전에 배웠던 것에 비해 상당히 까다로운 조건이다.</p>
+<p>하지만 천천히 읽고 따라가면 어렵지 않다.</p>
+<blockquote>
+<p>(만약) hp가 50 이하로 떨어지면</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>mp 5를 사용해서</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line">    mp = mp - <span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>hp 30을 회복한다.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line">    mp = mp - <span class="number">5</span>;</span><br><span class="line">    hp = hp + <span class="number">30</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>여기에 <code>hp를 30 회복했습니다</code> 라는 문구도 심심하니 넣어주자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line">    mp = mp - <span class="number">5</span>;</span><br><span class="line">    hp = hp + <span class="number">30</span>;</span><br><span class="line">    System.out.println(<span class="string">"hp를 30 회복했습니다."</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이제 이 코드를 반복문 안에 슬며시 넣어주자<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">         <span class="keyword">int</span> hp = <span class="number">100</span>;</span><br><span class="line">         <span class="keyword">int</span> mp = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; hp = hp - <span class="number">10</span> ) &#123;</span><br><span class="line"></span><br><span class="line">             <span class="comment">// 여기에 넣어주었다.</span></span><br><span class="line">             <span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line">                mp = mp - <span class="number">5</span>;</span><br><span class="line">                hp = hp + <span class="number">30</span>;</span><br><span class="line">                System.out.println(<span class="string">"hp를 30 회복했습니다."</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            System.out.print(<span class="string">"hp : "</span>);</span><br><span class="line">            System.out.println(hp);</span><br><span class="line">            System.out.print(<span class="string">"mp : "</span>);</span><br><span class="line">            System.out.println(mp);</span><br><span class="line">            System.out.println(<span class="string">"----------"</span>);</span><br><span class="line">         &#125;</span><br><span class="line">         </span><br><span class="line">         <span class="keyword">if</span>( hp == <span class="number">0</span> ) &#123;</span><br><span class="line">            System.out.println(<span class="string">"죽었다"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>이 코드는 문제 없이 잘 돌아갈까?</p>
+<p>한번 실행해보기 바란다.</p>
+<p>어떻게 됐는가.</p>
+<p>기대와는 달리 프로그램이 오랫동안 반복되다가 죽어버릴 것이다.</p>
+<h1 id="왜-제대로-되지-않는걸까"><a href="#왜-제대로-되지-않는걸까" class="headerlink" title="왜 제대로 되지 않는걸까?"></a>왜 제대로 되지 않는걸까?</h1><p>저 코드에서의 문제점은 무엇일까?</p>
+<p>감이 오는가?</p>
+<p>같이 해보기 전에 약 10분간 스스로 한번 문제점을 찾아보자.</p>
+<p>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>5분<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>10분!</p>
+<p>찾은 사람들은 일단 축하한다!</p>
+<p>축하받아 마땅하다.</p>
+<p>코드의 버그를 <code>디버깅</code> 할 수 있는 능력이 자연스럽게 생겼기 때문이다.</p>
+<h1 id="문제는-끝없는-hp-회복"><a href="#문제는-끝없는-hp-회복" class="headerlink" title="문제는 끝없는 hp 회복"></a>문제는 끝없는 hp 회복</h1><p>제목에서 얘기 했듯이 문제는 바로 <code>hp 30 회복</code> 에 있다.</p>
+<p>반복문의 종료 조건은 <code>hp가 0 이하일 때</code> 인데, </p>
+<p>종료를 못하게 자꾸 hp를 회복시키기 때문에 프로그램이 끊임없이 반복 되는 것이다.</p>
+<p>이건 애초에 프로그램 설계에 오류가 있는 것이고, 조건을 변경하던지 추가하던지 해서</p>
+<p>어떻게든 프로그램을 원하는 방향으로 만들어야 한다.</p>
+<p>여기서는 이 문제를 잡기 위해 이 조건을 추가 해 보았다.</p>
+<ul>
+<li>단, mp 가 부족하면 회복하지 않는다.</li>
+</ul>
+<p>그런데 이미 위 조건에서 회복할 때마다 mp 5를 소모 하고 있다.</p>
+<p>이 조건이 의미가 있는 걸까? 라고 물으면</p>
+<p>당연히 엄청나게 의미가 있다!</p>
+<p>지금 상태는 <code>mp 가 0을 넘어서 마이너스가 된 상태에서도 계속 제한 없이 회복</code>을 해주고 있다.</p>
+<p>이것은 의도한 바가 아니다. mp가 없으면 회복은 멈춰야 한다. </p>
+<p>( 물론 게임에선 자연회복이란 것도 있지만… 여기선 그런거 없다 )</p>
+<h1 id="mp-조건의-추가"><a href="#mp-조건의-추가" class="headerlink" title="mp 조건의 추가"></a>mp 조건의 추가</h1><p>그럼 추가한 조건을 코드로 만들어보자.</p>
+<p><code>mp가 부족하다</code> 를 코드로 표현해야하는데, 어느정도여야 부족한 것일까?</p>
+<p>아까 회복할 때마다 mp를 5를 소모한다고 했다.</p>
+<p>그렇다면 회복을 하기 위해서는 최소 5 이상의 mp가 있어야 한다.</p>
+<p><code>mp가 부족하면 회복하지 않는다</code> 는 것은 바꿔 말하면 </p>
+<p><code>mp에 여유가 있으면 회복해라</code> 라는 뜻도 되기 때문에 </p>
+<p>다음과 같이 써 줄 수 있다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( mp &gt;= <span class="number">5</span> ) &#123;</span><br><span class="line">    <span class="comment">// 회복</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그럼 이 조건을 추가해서 다시 프로그램을 완성 시켜보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">         <span class="keyword">int</span> hp = <span class="number">100</span>;</span><br><span class="line">         <span class="keyword">int</span> mp = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">for</span>( ; hp &gt; <span class="number">0</span> ; hp = hp - <span class="number">10</span> ) &#123;</span><br><span class="line"></span><br><span class="line">             <span class="comment">// 여기에 넣어주었다.</span></span><br><span class="line">             <span class="keyword">if</span>( hp &lt;= <span class="number">50</span> ) &#123;</span><br><span class="line">                 <span class="keyword">if</span>( mp &gt;= <span class="number">5</span> ) &#123;</span><br><span class="line">                    mp = mp - <span class="number">5</span>;</span><br><span class="line">                    hp = hp + <span class="number">30</span>;</span><br><span class="line">                    System.out.println(<span class="string">"hp를 30 회복했습니다."</span>);</span><br><span class="line">                 &#125;                </span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            System.out.print(<span class="string">"hp : "</span>);</span><br><span class="line">            System.out.println(hp);</span><br><span class="line">            System.out.print(<span class="string">"mp : "</span>);</span><br><span class="line">            System.out.println(mp);</span><br><span class="line">            System.out.println(<span class="string">"----------"</span>);</span><br><span class="line">         &#125;</span><br><span class="line">         </span><br><span class="line">         <span class="keyword">if</span>( hp == <span class="number">0</span> ) &#123;</span><br><span class="line">            System.out.println(<span class="string">"죽었다"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>자 다시 실행시켜 보자!!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">hp : 100</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 90</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 80</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 70</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp : 60</span><br><span class="line">mp : 10</span><br><span class="line">----------</span><br><span class="line">hp를 30 회복했습니다.</span><br><span class="line">hp : 80</span><br><span class="line">mp : 5</span><br><span class="line">----------</span><br><span class="line">hp : 70</span><br><span class="line">mp : 5</span><br><span class="line">----------</span><br><span class="line">hp : 60</span><br><span class="line">mp : 5</span><br><span class="line">----------</span><br><span class="line">hp를 30 회복했습니다.</span><br><span class="line">hp : 80</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 70</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 60</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 50</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 40</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 30</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 20</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">hp : 10</span><br><span class="line">mp : 0</span><br><span class="line">----------</span><br><span class="line">죽었다</span><br></pre></td></tr></table></figure>
+<p>이제야 원하는대로 프로그램이 동작하기 시작했다</p>
+<p>현업에서도 일은 별반 다르지 않다.</p>
+<p>이런 실수, 수정 작업의 연속이다.</p>
+<h1 id="다음에는"><a href="#다음에는" class="headerlink" title="다음에는"></a>다음에는</h1><p><code>함수</code>를 살짝 배워볼까 한다.</p>
+<p>휴… </p>
+<p>내가 학교 다닐 때를 생각하면 여기저기 포기하고 싶은 구간이 있었는데</p>
+<p>그 구간에 다가가고 있는 것 같다…</p>
+<p>그러나 여기서 포기하면 끝이다.</p>
+<p>최대한 천천히 설명하려고 노력할테니 끝까지 따라왔으면 좋겠다.</p>
+<p>( 이러다가 귀찮으면 내가 안쓰긴한다… )</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kingcats.net/2018/12/30/JavaLecture5/" data-id="cjqbltcpc00085krml9og3yfo" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/반복문/">반복문</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/자바/">자바</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/조건문/">조건문</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/30/nodeCheckVersion/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          노드 및 npm 버전 체크
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/30/JavaLecture4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">비전공 직군을 위한 자바스크립트 강좌 - 4. 반복문</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/">라이브 퀴즈 공유기</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/">공지</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/등급표/">등급표</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/영구밴-룰/">영구밴 룰</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/자동-퀴즈-관련/">자동 퀴즈 관련</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/">웹프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Vue/">Vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/">프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/Java/">Java</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그 클라우드</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/30/vueAdfitSettings/">webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/nodeCheckVersion/">노드 및 npm 버전 체크</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture5/">비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture4/">비전공 직군을 위한 자바스크립트 강좌 - 4. 반복문</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/29/JavaLecture3/">비전공 직군을 위한 자바스크립트 강좌 - 3. 조건문</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 왕야옹<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

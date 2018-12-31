@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기 | 왕야옹 창고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="애드핏에서 광고를 만들면 아래와 같은 코드를 광고 삽입 위치에 넣으라고 나온다. 12345&amp;lt;ins class=&quot;kakao_ad_area&quot; style=&quot;display:none;&quot;  data-ad-unit    = &quot;**********&quot;  data-ad-width   = &quot;320&quot;  data-ad-height  = &quot;50&quot;&amp;gt;&amp;lt;/ins&amp;gt; &amp;">
+<meta name="keywords" content="Vue,애드핏,Adfit,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기">
+<meta property="og:url" content="http://kingcats.net/2018/12/30/vueAdfitSettings/index.html">
+<meta property="og:site_name" content="왕야옹 창고">
+<meta property="og:description" content="애드핏에서 광고를 만들면 아래와 같은 코드를 광고 삽입 위치에 넣으라고 나온다. 12345&amp;lt;ins class=&quot;kakao_ad_area&quot; style=&quot;display:none;&quot;  data-ad-unit    = &quot;**********&quot;  data-ad-width   = &quot;320&quot;  data-ad-height  = &quot;50&quot;&amp;gt;&amp;lt;/ins&amp;gt; &amp;">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-31T00:44:12.318Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기">
+<meta name="twitter:description" content="애드핏에서 광고를 만들면 아래와 같은 코드를 광고 삽입 위치에 넣으라고 나온다. 12345&amp;lt;ins class=&quot;kakao_ad_area&quot; style=&quot;display:none;&quot;  data-ad-unit    = &quot;**********&quot;  data-ad-width   = &quot;320&quot;  data-ad-height  = &quot;50&quot;&amp;gt;&amp;lt;/ins&amp;gt; &amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="왕야옹 창고" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3598320494828213",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+</html>
+<body>      
+  <div id="container">      
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">왕야옹 창고</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kingcats.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vueAdfitSettings" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/30/vueAdfitSettings/" class="article-date">
+  <time datetime="2018-12-30T13:49:05.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/웹프로그래밍/">웹프로그래밍</a>►<a class="article-category-link" href="/categories/웹프로그래밍/Vue/">Vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>애드핏에서 광고를 만들면 아래와 같은 코드를 광고 삽입 위치에 넣으라고 나온다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ins <span class="class"><span class="keyword">class</span></span>=<span class="string">"kakao_ad_area"</span> style=<span class="string">"display:none;"</span> </span><br><span class="line"> data-ad-unit    = <span class="string">"**********"</span> </span><br><span class="line"> data-ad-width   = <span class="string">"320"</span> </span><br><span class="line"> data-ad-height  = <span class="string">"50"</span>&gt;&lt;/ins&gt; </span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//t1.daumcdn.net/adfit/static/ad.min.js"</span> <span class="keyword">async</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>보통같으면 광고 출력을 원하는 위치에 바로 코드를 삽입하면 되는 일이지만</p>
+<p>webpack에서 vue를 모듈화 시켜서 사용 할 때의 .Vue 파일은 아래와 같이 구성되어 있다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;        </span></span><br><span class="line"><span class="javascript">        data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;                </span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="undefined">        &#125;        </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined">    </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>여기에 무턱대고</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ins</span> <span class="attr">class</span>=<span class="string">"kakao_ad_area"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">data-ad-unit</span>    = <span class="string">"**********"</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">data-ad-width</span>   = <span class="string">"320"</span> </span></span><br><span class="line"><span class="tag">        <span class="attr">data-ad-height</span>  = <span class="string">"50"</span>&gt;</span><span class="tag">&lt;/<span class="name">ins</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//t1.daumcdn.net/adfit/static/ad.min.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;        </span></span><br><span class="line"><span class="javascript">        data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;                </span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="undefined">        &#125;        </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined">    </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>이렇게 넣으면 vue-parser 에서 오류가 발생한다. 저 template 태그 안에 script 태그를 파싱을 못해서 그런듯하다.</p>
+<p>그렇다고 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//t1.daumcdn.net/adfit/static/ad.min.js"</span> <span class="keyword">async</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>이 코드만 따로 떼어내서 html의 헤더나 본문에 직접 붙여넣으면 광고가 어떤 때에는 나왔다가 </p>
+<p>어떤 때에는 또 안나오는 현상이 발생한다.</p>
+<p>이럴 때에는 다음과 같이 조치하면 된다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ins</span> <span class="attr">class</span>=<span class="string">"kakao_ad_area"</span> <span class="attr">style</span>=<span class="string">"display:none;width:100%"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">:data-ad-unit</span>=<span class="string">"**********"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">data-ad-width</span>   = <span class="string">"320"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">data-ad-height</span>  = <span class="string">"50"</span>&gt;</span><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-el:scriptHolder</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;        </span></span><br><span class="line"><span class="javascript">        data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">                </span></span><br><span class="line"><span class="undefined">            &#125;;</span></span><br><span class="line"><span class="undefined">        &#125;,        </span></span><br><span class="line"><span class="javascript">        mounted: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">const</span> v = <span class="keyword">this</span>;</span></span><br><span class="line"><span class="javascript">            $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> scriptEl = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript">                scriptEl.setAttribute(<span class="string">'src'</span>, <span class="string">'//t1.daumcdn.net/adfit/static/ad.min.js'</span>);</span></span><br><span class="line"><span class="javascript">                scriptEl.async = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.head.appendChild(scriptEl);</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.body.appendChild(scriptEl);</span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined">    </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>jquery를 이용해서 document 가 준비 완료 되고나면 그 이후에 동적으로 </p>
+<p>애드핏용 스크립트 코드를 삽입하는 방식이다.</p>
+<p>이렇게하면 애드핏 광고가 문제없이 잘 나온다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kingcats.net/2018/12/30/vueAdfitSettings/" data-id="cjqbltcpj000e5krmwddx4mzg" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/애드핏/">애드핏</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/30/nodeCheckVersion/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">노드 및 npm 버전 체크</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/">라이브 퀴즈 공유기</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/">공지</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/등급표/">등급표</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/영구밴-룰/">영구밴 룰</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/자동-퀴즈-관련/">자동 퀴즈 관련</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/">웹프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Vue/">Vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/">프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/Java/">Java</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그 클라우드</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/30/vueAdfitSettings/">webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/nodeCheckVersion/">노드 및 npm 버전 체크</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture5/">비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture4/">비전공 직군을 위한 자바스크립트 강좌 - 4. 반복문</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/29/JavaLecture3/">비전공 직군을 위한 자바스크립트 강좌 - 3. 조건문</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 왕야옹<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

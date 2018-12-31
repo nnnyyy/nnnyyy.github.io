@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>비전공 직군을 위한 자바스크립트 강좌 - 1 | 왕야옹 창고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담나는 게임회사에 다니는 평범한 개발자다. 게임회사에서 일하게 되면 기획자 나 디자이너 직군과 수없이 마주치게 되는데,  나역시 많은 디자이너와 기획자 중 몇 명을 알게 되어 그들과 이야기를 나누던 중에">
+<meta name="keywords" content="자바,Java,프로그래밍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="비전공 직군을 위한 자바스크립트 강좌 - 1">
+<meta property="og:url" content="http://kingcats.net/2018/12/29/JavaLecture1/index.html">
+<meta property="og:site_name" content="왕야옹 창고">
+<meta property="og:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담나는 게임회사에 다니는 평범한 개발자다. 게임회사에서 일하게 되면 기획자 나 디자이너 직군과 수없이 마주치게 되는데,  나역시 많은 디자이너와 기획자 중 몇 명을 알게 되어 그들과 이야기를 나누던 중에">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-31T00:44:12.300Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="비전공 직군을 위한 자바스크립트 강좌 - 1">
+<meta name="twitter:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담나는 게임회사에 다니는 평범한 개발자다. 게임회사에서 일하게 되면 기획자 나 디자이너 직군과 수없이 마주치게 되는데,  나역시 많은 디자이너와 기획자 중 몇 명을 알게 되어 그들과 이야기를 나누던 중에">
+  
+    <link rel="alternate" href="/atom.xml" title="왕야옹 창고" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3598320494828213",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+</html>
+<body>      
+  <div id="container">      
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">왕야옹 창고</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kingcats.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaLecture1" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/29/JavaLecture1/" class="article-date">
+  <time datetime="2018-12-28T16:36:59.000Z" itemprop="datePublished">2018-12-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/프로그래밍/">프로그래밍</a>►<a class="article-category-link" href="/categories/프로그래밍/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      비전공 직군을 위한 자바스크립트 강좌 - 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.<br>전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.</p>
+</blockquote>
+<hr>
+<h1 id="잡담"><a href="#잡담" class="headerlink" title="잡담"></a>잡담</h1><p>나는 게임회사에 다니는 평범한 개발자다.</p>
+<p>게임회사에서 일하게 되면 <code>기획자</code> 나 <code>디자이너</code> 직군과 수없이 마주치게 되는데, </p>
+<p>나역시 많은 디자이너와 기획자 중 몇 명을 알게 되어 그들과 이야기를 나누던 중에 </p>
+<p>디자이너와 기획자 중에서도 <code>프로그래머</code>의 영역에 도전 해보고 싶은데, </p>
+<p>어떻게 시작하면 좋을지 몰라서 시작도 못 해본 이들이 많다는 것을 알게 되었다.</p>
+<p>예전부터 내가 알고 있는 지식을 남에게 전달해주는 것을 워낙에 좋아했던터라 </p>
+<p>( 물론 아는 것이 그리 많지는 않지만…! )</p>
+<p>이번에 도전의식이 강한 비프로그래머 직군들을 <code>자바로 안드로이드 네이티브 앱 만들기</code> 까지 </p>
+<p>성공할 수 있도록 가르쳐보기로 마음을 먹었다.</p>
+<hr>
+<h1 id="시작이-반이다"><a href="#시작이-반이다" class="headerlink" title="시작이 반이다"></a>시작이 반이다</h1><p>이론이 중요하다지만, 눈에 보이는 결과물이 없으면 비전공자들은 쉽게 지치므로</p>
+<p>일단 여기선 이론은 제껴두고 자바 스크립트를 사용해서 글씨를 찍어보는 일부터 해보자.</p>
+<p>그러면 우선 아래의 링크를 열어보자 </p>
+<p><a href="https://www.tutorialspoint.com/compile_java_online.php" target="_blank" rel="noopener">여기 클릭</a></p>
+<p>누르고 나면 아래와 같은 외계어 코드가 왼쪽 창에 표시되는 것을 볼 수 있다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>일단은 이해하지 않아도 좋다. 하려고 해도 잘 안될 것이다.</p>
+<p>public 이 뭐고 class는 또 뭐며 static, void, main, String… 도통 뭔지 모를 소리들이다.</p>
+<p>아무것도 모르겠으니 그냥 왼쪽 상단의 Execute 버튼을 눌러서 실행이나 해보자.</p>
+<p>그러면 오른쪽 화면에 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World</span><br></pre></td></tr></table></figure>
+<p>가 찍혀있을 것이다.</p>
+<p>오 뭔가 위에 쓰여있는 글자 중에 하나가 나온 것 같다.</p>
+<p>이번에는 Hello World 라고 쓰인 부분을 아래와 같이 바꿔보자</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"Hello My World"</span>);</span><br></pre></td></tr></table></figure>
+<p>Hello World 가 Hello My World 로 바뀐 상태다.</p>
+<p>이상태에서 다시 <code>Execute</code>를 눌러보자.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello My World</span><br></pre></td></tr></table></figure>
+<p>위 화면이 나왔다면 성공이다.</p>
+<p>여기까지 했으면 일단은 반은 성공한거다.</p>
+<p>시작을 했으니까 말이다.</p>
+<p>우리가 지금 작성한 프로그램은</p>
+<blockquote>
+<p>화면에 Hello My World 글자를 찍는 프로그램</p>
+</blockquote>
+<p>이다.</p>
+<p>간단하지만 프로그램 하나를 만들어 본 것이다.</p>
+<h1 id="방금-만든-프로그램-분석"><a href="#방금-만든-프로그램-분석" class="headerlink" title="방금 만든 프로그램 분석"></a>방금 만든 프로그램 분석</h1><p>위 코드를 다시 한번 보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>사실 이 코드는 모든 자바 코드의 베이스캠프가 되는 아주 중요한 코드이다.</p>
+<p>그 사실은 저 <code>main</code> 이란 영단어가 주는 무게감에서 확인할 수 있다.</p>
+<blockquote>
+<blockquote>
+<p>main : 본관, 본토, 주요부를 이루는</p>
+</blockquote>
+</blockquote>
+<p>등의 뜻이 있는 단어인데, 여기서는 프로그램의 시작을 나타내는 지점이라고 생각하면 될 것 같다.</p>
+<p>그리고 main 오른쪽에 있는 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="comment">// 중괄호 내부 영역</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이렇게 생긴 중괄호는 <code>블럭(Block)</code> 이라고 불리운다.</p>
+<p>만약 이 <code>블럭</code> 이 main 옆에 위치하고 있으면 <code>main의 블럭</code> 이라고 부른다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main() &#123;</span><br><span class="line">    <span class="comment">// main 의 블럭</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>( 일단 public static void 이나 String args[] 등은 무시하도록 하자. )</p>
+<p>모든 코딩은 앞으로 이 <code>main 블럭</code> 내에서 대부분 이루어질 것이다</p>
+<hr>
+<h1 id="다음에는"><a href="#다음에는" class="headerlink" title="다음에는.."></a>다음에는..</h1><p>저 <code>main 블럭</code> 안에서 이제 본격적으로 놀 준비를 해야한다.</p>
+<p>다음 시간에는 <code>변수</code>, <code>상수</code> 를 알아보고 화면에 표시 해보겠다.</p>
+<blockquote>
+<p><a href="/2018/12/29/JavaLecture2/">다음 강좌 보러 가기</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kingcats.net/2018/12/29/JavaLecture1/" data-id="cjqbltcp100035krm1oiyh66o" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/자바/">자바</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/29/JavaLecture2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          비전공 직군을 위한 자바스크립트 강좌 - 2. 변수와 상수
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/29/AutoQuizNotice/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">자동 퀴즈 시간 안내</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/">라이브 퀴즈 공유기</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/">공지</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/등급표/">등급표</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/영구밴-룰/">영구밴 룰</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/자동-퀴즈-관련/">자동 퀴즈 관련</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/">웹프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Vue/">Vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/">프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/Java/">Java</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그 클라우드</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/30/vueAdfitSettings/">webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/nodeCheckVersion/">노드 및 npm 버전 체크</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture5/">비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture4/">비전공 직군을 위한 자바스크립트 강좌 - 4. 반복문</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/29/JavaLecture3/">비전공 직군을 위한 자바스크립트 강좌 - 3. 조건문</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 왕야옹<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

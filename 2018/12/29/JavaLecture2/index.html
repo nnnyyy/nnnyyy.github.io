@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>비전공 직군을 위한 자바스크립트 강좌 - 2. 변수와 상수 | 왕야옹 창고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담프로그래밍에 대한 깊은 이해를 하는 것은 사실 많은 기본 지식을 필요로 한다. 일단 bit, Byte, KByte 같은 단위 의 개념 기본적인 수학 지식, 예를 들면 함수 의 원리 같은.. 어딘가에서 들">
+<meta name="keywords" content="자바,Java,프로그래밍,변수,상수">
+<meta property="og:type" content="article">
+<meta property="og:title" content="비전공 직군을 위한 자바스크립트 강좌 - 2. 변수와 상수">
+<meta property="og:url" content="http://kingcats.net/2018/12/29/JavaLecture2/index.html">
+<meta property="og:site_name" content="왕야옹 창고">
+<meta property="og:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담프로그래밍에 대한 깊은 이해를 하는 것은 사실 많은 기본 지식을 필요로 한다. 일단 bit, Byte, KByte 같은 단위 의 개념 기본적인 수학 지식, 예를 들면 함수 의 원리 같은.. 어딘가에서 들">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-12-31T00:44:12.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="비전공 직군을 위한 자바스크립트 강좌 - 2. 변수와 상수">
+<meta name="twitter:description" content="이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.   잡담프로그래밍에 대한 깊은 이해를 하는 것은 사실 많은 기본 지식을 필요로 한다. 일단 bit, Byte, KByte 같은 단위 의 개념 기본적인 수학 지식, 예를 들면 함수 의 원리 같은.. 어딘가에서 들">
+  
+    <link rel="alternate" href="/atom.xml" title="왕야옹 창고" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3598320494828213",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+</html>
+<body>      
+  <div id="container">      
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">왕야옹 창고</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kingcats.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaLecture2" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/29/JavaLecture2/" class="article-date">
+  <time datetime="2018-12-29T00:52:47.000Z" itemprop="datePublished">2018-12-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/프로그래밍/">프로그래밍</a>►<a class="article-category-link" href="/categories/프로그래밍/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      비전공 직군을 위한 자바스크립트 강좌 - 2. 변수와 상수
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>이 강좌는 철저히 비전공 직군에게 최대한 쉽게 프로그래밍을 이해시키기 위해 만들었습니다.<br>전공자들에겐 다소 쉽고 지루할 수 있음을 미리 경고합니다.</p>
+</blockquote>
+<hr>
+<h1 id="잡담"><a href="#잡담" class="headerlink" title="잡담"></a>잡담</h1><p>프로그래밍에 대한 깊은 이해를 하는 것은 사실 많은 기본 지식을 필요로 한다.</p>
+<p>일단 bit, Byte, KByte 같은 <code>단위</code> 의 개념</p>
+<p>기본적인 <code>수학 지식</code>, 예를 들면 <code>함수</code> 의 원리 같은..</p>
+<p>어딘가에서 들어봤을 법한 “컴퓨터는 0과 1밖에 몰라” 에 쓰이는 <code>이진법</code></p>
+<p>그리고 또 <code>영문 타자 실력</code>! ( 안 중요해 보이지만 매우 중요하다 )</p>
+<p>사실 이 모든걸 머릿속에 집어넣고 시작하기엔 </p>
+<p>지나온 세월에서 너무 모르고 또는 잊고 살고 있었던 것들이라 낯설고 어렵기 마련이다.</p>
+<p>.<br>.<br>.</p>
+<p>그래도 해야한다.</p>
+<p>안하면 프로그래밍을 이해할 수 없다.</p>
+<p>천천히 설명을 할테니 포기하지 말고 따라왔으면 좋겠다.</p>
+<hr>
+<h1 id="다시-복습"><a href="#다시-복습" class="headerlink" title="다시 복습"></a>다시 복습</h1><p>1편에서 사용했던 사이트를 다시 한번 열어보자.</p>
+<p><a href="https://www.tutorialspoint.com/compile_java_online.php" target="_blank" rel="noopener">여기 클릭</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그래도 몇번 봤었다고 이전보단 덜 낯설다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>코드를 작성할 때 전에 이야기했던 것처럼 main 영역 안에 작성할 것이다.</p>
+<p>모든 프로그램은 main 영역에 작성된 코드를 기반으로 실행된다는 사실을 알아두자.</p>
+<p>우리는 전시간에 프로그램을 실행시키면 </p>
+<p>Hello World 가 화면에 <code>출력(output, 出力)</code> 된다는 사실을 알고 있다. </p>
+<p>그리고 Hello World를 Hello My World로 바꿔서 실행하면 </p>
+<p>바뀐 문자열이 <code>출력</code>되는 것도 알고 있다. </p>
+<p>화면에 무언가를 <code>출력</code> 시키기 위해서는 </p>
+<blockquote>
+<p>System.out.println(무언가);</p>
+</blockquote>
+<p>를 써줘야 한다는 것을 일단 <code>암기</code> 하도록 하자. </p>
+<p>원리를 알려고 파고들기 시작하면 또 재미가 없어진다. </p>
+<h1 id="다른걸-출력해보기"><a href="#다른걸-출력해보기" class="headerlink" title="다른걸 출력해보기"></a>다른걸 출력해보기</h1><p>이제 저 무언가에 쌍따옴표가 붙은 <code>문자열</code> 이 아닌 그냥 <code>숫자</code> 10을 넣어보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        System.out.println(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Execute를 눌러 실행해보면 </p>
+<p>화면에 10이 <code>출력</code> 되는 것을 볼 수 있다.</p>
+<p>저 <code>무언가</code> 에 <code>문자</code>가 아닌 <code>숫자</code>를 써도 된다는 사실을 이제 알았다.</p>
+<h1 id="변수-變數-variable-와-상수-常數-constant"><a href="#변수-變數-variable-와-상수-常數-constant" class="headerlink" title="변수 (變數, variable) 와 상수 ( 常數, constant )"></a>변수 (變數, variable) 와 상수 ( 常數, constant )</h1><p>방금 숫자 10을 출력 해 보았다.</p>
+<p>저 10은 프로그램이 시작해서 끝날 때 까지 계속 10이다. </p>
+<p>중간에 우리 맘대로 바꿀 수 없다.</p>
+<p>이렇게 바꿀 수 없이 고정된 수를 <code>상수</code> 라고 한다.</p>
+<h2 id="변수의-필요성"><a href="#변수의-필요성" class="headerlink" title="변수의 필요성"></a>변수의 필요성</h2><p>rpg 게임을 만든다고 생각해보자.</p>
+<p>캐릭터를 생성하고 나면 hp 가 주어질 것이고, </p>
+<p>그 hp는 싸울 때마다 깎여야한다.  </p>
+<p>그런데 지금 상황은 hp 가 10 으로 고정인 상태인거다.</p>
+<p>저 값이 <code>가변적</code> 이어야 hp를 줄여주는 행동을 할 수 있다.</p>
+<p>일단 게임 만드는 기분이 조금이라도 생기도록 코드를 변경해보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        System.out.println(<span class="string">"나의 hp :"</span>);</span><br><span class="line">        System.out.println(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>실행하면</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">나의 hp : </span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+<p>( 줄바꿈이 매우 거슬리지만 일단 이대로 놔두자 )</p>
+<p>그러면 이제 저 10을 <code>변수</code>로 만들어서 <code>출력</code> 하는 방법을 알아보자.</p>
+<h2 id="변수의-‘선언’-과-‘대입’"><a href="#변수의-‘선언’-과-‘대입’" class="headerlink" title="변수의 ‘선언’ 과 ‘대입’"></a>변수의 ‘선언’ 과 ‘대입’</h2><p>맨 위의 잡담에서 했던 말을 기억하는가.</p>
+<blockquote>
+<p>bit, Byte, KByte 같은 <code>단위</code> 의 개념</p>
+</blockquote>
+<p>어차피 피할 수 없는 산이기에 넘어야 한다.</p>
+<p>컴퓨터 안에 무언가( 우리는 hp )를 저장하기 위해서는 저장공간이 필요하다.</p>
+<p>우리는 이제 컴퓨터에게 그 저장공간을 <code>할당</code> 해달라고 <code>선언</code>을 할 것이다.</p>
+<p>컴퓨터 용량에 대해서나 사양을 얘기할 때 “야 램이 몇 기가더라, 그 게임 몇 메가더라”</p>
+<p>라는 이야기를 꽤 많이 듣거나 해봤을 것이다.</p>
+<p>기가니 메가니 비트니 하는 것들이 전부 컴퓨터의 저장공간의 <code>단위</code> 이다.</p>
+<blockquote>
+<p>bit - Byte - KiloByte - MegaByte - GigaByte - TeraBye</p>
+</blockquote>
+<p>순서는 이렇게 되어있다. ( Tera 뒤에도 더 있지만 흔하게 볼 일은 없다… 아직은 )</p>
+<p>이것에 대한 또 자세한 설명은 하면 금방 재미없어지기 시작하기 때문에 뒤로 미루도록 하고, </p>
+<p>결국 우리는 저 단위 중에 bit와 Byte 단위를 사용해 볼 것이다.</p>
+<p>얘기가 길어졌는데, 일단 또 코드를 작성해보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        <span class="keyword">int</span> hp;</span><br><span class="line">        hp = <span class="number">10</span>;</span><br><span class="line">        System.out.println(<span class="string">"나의 hp :"</span>);</span><br><span class="line">        System.out.println(hp);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>뭔가 바뀐 것 같고, 뭘 위한 것인지 대충 느낌은 오지만 아직 확실히는 모르겠다.</p>
+<p>실행을 해보자.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">나의 hp : </span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+<p>오잉? 결과는 바뀐게 없다.</p>
+<p>코드를 아래와 같이 변경해보자.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        <span class="keyword">int</span> hp;</span><br><span class="line">        hp = <span class="number">20</span>; <span class="comment">// 이곳이 바뀌었다.</span></span><br><span class="line">        System.out.println(<span class="string">"나의 hp :"</span>);</span><br><span class="line">        System.out.println(hp);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>결과는</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">나의 hp : </span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+<p>이제 위 코드를 한줄 한줄 차례대로 설명해보겠다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> hp;</span><br></pre></td></tr></table></figure>
+<p>여기서부터 또 외계어 등장이다.</p>
+<p><code>int</code>는 어디서 굴러온 것인가. 그리고 hp는 왜 <code>int</code> 옆에 썼는가.</p>
+<p>일단 <code>int</code> 는 <code>Integer( 정수 )</code> 의 약자이다. 그리고 <code>hp</code> 는 우리가 정해준 <code>이름</code> 이다.</p>
+<p>위 한 줄을 다시 해석하면 </p>
+<blockquote>
+<p>“컴퓨터야 정수(숫자)를 담을 수 있는 공간을 주고 그 공간 이름을 hp로 해주렴”</p>
+</blockquote>
+<p>이 된다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hp = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<p>이 줄 해석은 </p>
+<blockquote>
+<p>“컴퓨터야 hp로 이름지은 공간에 20을 넣어주렴 ( <code>대입</code> 시켜주렴 )</p>
+</blockquote>
+<p>이다.</p>
+<p>그리고 마지막으로</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(hp);</span><br></pre></td></tr></table></figure>
+<p>이 한 줄! 이미 눈치야 다 채고 있을 거지만</p>
+<p>이 강좌 초반에 썼던걸 다시 가져와보자</p>
+<blockquote>
+<p>System.out.println(무언가);</p>
+</blockquote>
+<p>이 <code>무언가</code>에는 <code>문자열</code>, <code>상수</code> 가 들어갈 수 있었듯이 <code>변수</code>도 넣을 수 있고 우리는 아래와 같이</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(hp);</span><br></pre></td></tr></table></figure>
+<p>hp 라는 <code>변수</code>를 <code>출력</code> 한 것이다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> hp;</span><br></pre></td></tr></table></figure>
+<p>이것을 프로그래머들이 쓰는 용어로 이야기하면</p>
+<blockquote>
+<p>int 형( Type ) 변수 hp 를 선언 했다.</p>
+</blockquote>
+<p>라고 한다. </p>
+<p>여기서 <code>int</code>는 <code>변수타입</code> 이고, <code>hp</code> 는 <code>변수명(이름)</code> 인 것이다.</p>
+<p>참고로 <code>변수타입</code>은 <u>선언 할 때만</u> 써준다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> mp;</span><br><span class="line"><span class="keyword">int</span> mp = <span class="number">20</span>; <span class="comment">// X</span></span><br></pre></td></tr></table></figure>
+<p>이런식으로 같은 이름으로 <u> 두 번 선언하면 안된다 </u></p>
+<p><code>hp</code> 는 우리가 원하는 다른 이름으로 언제든지 변경 가능하다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// main의 영역 시작</span></span><br><span class="line">        <span class="keyword">int</span> mp;</span><br><span class="line">        mp = <span class="number">20</span>;</span><br><span class="line">        System.out.println(<span class="string">"나의 mp :"</span>);</span><br><span class="line">        System.out.println(mp);</span><br><span class="line">        <span class="comment">// main의 영역 끝</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이런식으로 말이다. </p>
+<p>이것을 다시 출력해보면 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">나의 mp :</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+<p>이 될 것이다.</p>
+<hr>
+<h1 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h1><p>변수 개념을 정확히 알고 있어야 앞으로 개고생하지 않는다.</p>
+<p>이것저것 바꿔서 테스트 해보는 습관을 들여라~</p>
+<h1 id="다음이야기"><a href="#다음이야기" class="headerlink" title="다음이야기"></a>다음이야기</h1><p>조건에 따라 다르게 표시할 수 있는 <code>if문</code> 에 대해서 배워보겠다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kingcats.net/2018/12/29/JavaLecture2/" data-id="cjqbltcpa00065krmotn9455e" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/변수/">변수</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/상수/">상수</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/자바/">자바</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/29/JavaLecture3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          비전공 직군을 위한 자바스크립트 강좌 - 3. 조건문
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/29/JavaLecture1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">비전공 직군을 위한 자바스크립트 강좌 - 1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/">라이브 퀴즈 공유기</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/">공지</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/등급표/">등급표</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/영구밴-룰/">영구밴 룰</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/라이브-퀴즈-공유기/공지/자동-퀴즈-관련/">자동 퀴즈 관련</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/">웹프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/웹프로그래밍/Vue/">Vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/">프로그래밍</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/프로그래밍/Java/">Java</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Adfit/">Adfit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/if/">if</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/노드/">노드</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/반복문/">반복문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/버전-체크/">버전 체크</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/변수/">변수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/상수/">상수</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/심화학습/">심화학습</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/애드핏/">애드핏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/자바/">자바</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/조건문/">조건문</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/프로그래밍/">프로그래밍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">태그 클라우드</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Adfit/" style="font-size: 10px;">Adfit</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/반복문/" style="font-size: 15px;">반복문</a> <a href="/tags/버전-체크/" style="font-size: 10px;">버전 체크</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/상수/" style="font-size: 10px;">상수</a> <a href="/tags/심화학습/" style="font-size: 10px;">심화학습</a> <a href="/tags/애드핏/" style="font-size: 10px;">애드핏</a> <a href="/tags/자바/" style="font-size: 20px;">자바</a> <a href="/tags/조건문/" style="font-size: 15px;">조건문</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">12월 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/30/vueAdfitSettings/">webpack 구조에서 .Vue 파일로 Template 을 사용할 때 Adfit(애드핏) 광고 제대로 나오게 하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/nodeCheckVersion/">노드 및 npm 버전 체크</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture5/">비전공 직군을 위한 자바스크립트 강좌 - 5. 조건문 반복문 응용하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/30/JavaLecture4/">비전공 직군을 위한 자바스크립트 강좌 - 4. 반복문</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/29/JavaLecture3/">비전공 직군을 위한 자바스크립트 강좌 - 3. 조건문</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 왕야옹<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
