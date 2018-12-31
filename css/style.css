@@ -737,6 +737,14 @@ a.article-title:hover {
   font-family: FontAwesome;
   padding-right: 6px;
 }
+.article-donate-link {
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+  color: #ff007f;
+}
 #article-nav {
   position: relative;
 }
